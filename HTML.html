@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadi Gidelim!</title>
+    <link rel="styleshift"  type="text/css" href="CSS.css">
+</head>
+<style> 
+  
+body {
+            background: radial-gradient(circle, 
+                #b581b5 0%, 
+                #e6a376e1 20%, 
+                #ffff6bd1 40%, 
+                #88ee88d1 60%, 
+                #bff8f8d1 80%, 
+                #aaaaeee1 100%
+            );
+            background-size: 200% 200%;
+            animation: tieDye 10s infinite alternate;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes tieDye {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        .menu-button {
+            background-color:white; 
+            color:black;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px; /* Tam yuvarlak görünüm için */
+            cursor: pointer;
+            
+        }
+</style>
+<body>
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu()">MENU</button>
+        <div class="menu-container" id="menu">
+            <p>  Günlük</p>
+            <p>  Haftalık</p>
+            <p>  Aylık</p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
