@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kadın Spor Giyim</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff0f5;
+    }
+    header {
+      background-color: #f06292;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      background-color: #d81b60;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      background-color: #c2185b;
+    }
+    main {
+      display: flex;
+      gap: 30px;
+      padding: 30px;
+    }
+    .urunler {
+      flex: 2;
+    }
+    .urun {
+      display: flex;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
+      align-items: center;
+      gap: 20px;
+    }
+    .urun img {
+      width: 120px;
+      border-radius: 8px;
+    }
+    .urun-bilgi {
+      flex: 1;
+    }
+    .urun-bilgi h3 {
+      margin: 0;
+      color: #d81b60;
+    }
+    .urun-bilgi span {
+      font-weight: bold;
+    }
+    .urun button {
+      padding: 8px 12px;
+      background-color: #d81b60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .urun button:hover {
+      background-color: #c2185b;
+    }
+    .sepet {
+      flex: 1;
+      background-color: #ffe4ec;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sepet h2 {
+      margin-top: 0;
+      color: #d81b60;
+    }
+    #sepetListesi li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      background-color: white;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    #sepetListesi li button {
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+    .temizle-btn {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background-color: #b71c1c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .temizle-btn:hover {
+      background-color: #880e4f;
+    }
+    footer {
+      background-color: #f06292;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kadın Spor Giyim</h1>
+    <nav>
+      <ul>
+        <li><a href="HTML.html">Ana Sayfa</a></li>
+        <li><a href="Urunler.html">Ürünler</a></li>
+        <li><a href="İletişim.html">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Ürünler -->
+    <section class="urunler">
+      <div class="urun">
+        <img src="https://www.lismina.com/idea/dk/51/myassets/products/871/cem05122-kopya.jpg?revision=1744813303" alt="Tayt" />
+        <div class="urun-bilgi">
+          <h3>Siyah Spor Tayt</h3>
+          <p>Rahat ve esnek</p>
+          <span>₺299</span>
+        </div>
+        <button onclick="sepeteEkle('Spor Tayt')">Sepete Ekle</button>
+      </div>
+
+      <div class="urun">
+  <img src="data:image/jpeg;base64,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" alt="Tayt"  />
+  <div class="urun-bilgi">
+    <h3>Biker Tayt</h3>
+    <p>Toparlayıcı</p>
+    <span>₺439</span>
+  </div>
+  <button onclick="sepeteEkle('Spor Tayt')">Sepete Ekle</button>
+</div>
+
+
+      <div class="urun">
+        <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/70b9bd1d-ec83-4171-9cf4-82ed62f9e810/W+NK+ALATE+LL+MS+BRA.png" alt="Sütyen" />
+        <div class="urun-bilgi">
+          <h3>Spor Sütyen</h3>
+          <p>Destekleyici</p>
+          <span>₺199</span>
+        </div>
+        <button onclick="sepeteEkle('Spor Sütyen')">Sepete Ekle</button>
+      </div>
+
+      <div class="urun">
+        <img src="https://static.ticimax.cloud/39044/uploads/urunresimleri/buyuk/2966-siyah-toparlayici-taytkajdjdnd--4bee10a.jpeg" alt="Toparlayıcı Tayt" />
+        <div class="urun-bilgi">
+          <h3>Desenli Tayt</h3>
+          <p>Şık desenli</p>
+          <span>₺349</span>
+        </div>
+        <button onclick="sepeteEkle('Desenli Tayt')">Sepete Ekle</button>
+      </div>
+    </section>
+
+          <div class="urun">
+        <img src="data:image/jpeg;base64,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" alt="Sütyen" />
+        <div class="urun-bilgi">
+          <h3>Spor Sütyen</h3>
+          <p>Siyah Orta Destek Sırt Detaylı</p>
+          <span>₺250</span>
+        </div>
+        <button onclick="sepeteEkle('Spor Sütyen')">Sepete Ekle</button>
+      </div>
+
+    <!-- Sepet -->
+    <aside class="sepet" id="sepet">
+      <h2>Sepet</h2>
+      <ul id="sepetListesi"></ul>
+      <button class="temizle-btn" onclick="sepetiTemizle()">Sepeti Temizle</button>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kadın Spor Giyim</p>
+  </footer>
+
+  <script>
+    function sepeteEkle(urunAdi) {
+      const sepetListesi = document.getElementById("sepetListesi");
+
+      const li = document.createElement("li");
+      li.textContent = urunAdi;
+
+      const silBtn = document.createElement("button");
+      silBtn.textContent = "Sil";
+      silBtn.onclick = () => li.remove();
+
+      li.appendChild(silBtn);
+      sepetListesi.appendChild(li);
+    }
+
+    function sepetiTemizle() {
+      const sepetListesi = document.getElementById("sepetListesi");
+      sepetListesi.innerHTML = "";
+    }
+  </script>
+</body>
+</html>
