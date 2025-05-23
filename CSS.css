@@ -1,42 +1,55 @@
+/* Bu CSS dosyası stil tanımlarını içerir */
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Yazı tipi ayarı */
   margin: 0;
   padding: 0;
-  background-color: #fff0f5;
-  color: #333;
+  background-color: #fff0f5; /* Sayfa arka plan rengi (açık pembe tonları) */
+  color: #333; /* Genel metin rengi */
 }
+
 header {
-  background-color: #f06292;
-  color: white;
+  background-color: #f06292; /* Üst kısım arka plan rengi */
+  color: white; /* Başlık ve menü yazı rengi */
   padding: 20px;
-  text-align: center;
+  display: flex; /* Başlık ve menü yanyana dizilir */
+  justify-content: space-between; /* Elemanlar iki uca yaslanır */
+  align-items: center; /* Dikey ortalama */
 }
+
 header h1 {
-  margin-bottom: 10px;
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
 }
+
 nav ul.menu {
-  list-style: none;
+  list-style: none; /* Liste işaretlerini kaldırır */
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; /* Yatay liste */
+  justify-content: flex-end; /* Menü sağa yaslanır */
+  gap: 20px; /* Menü öğeleri arası boşluk */
 }
+
 nav ul.menu li {
-  display: inline;
+  display: inline; /* Menü öğeleri yatay sıralanır */
 }
+
 nav ul.menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  background-color: #d81b60;
+  background-color: #d81b60; /* Menü arkaplan rengi */
   padding: 8px 16px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* Hover geçişi */
 }
+
 nav ul.menu a:hover {
-  background-color: #c2185b;
+  background-color: #c2185b; /* Hover sırasında değişen renk */
 }
+
 .btn {
   display: inline-block;
   background-color: #f06292;
@@ -46,14 +59,17 @@ nav ul.menu a:hover {
   border-radius: 10px;
   margin-top: 20px;
 }
+
 main {
   text-align: center;
   padding: 30px;
 }
+
 .filtreler {
   text-align: center;
   margin: 20px;
 }
+
 .filtreler button {
   background-color: #f06292;
   border: none;
@@ -64,16 +80,19 @@ main {
   cursor: pointer;
   font-weight: bold;
 }
+
 .filtreler button:hover {
   background-color: #d81b60;
 }
+
 .urun-listesi {
   display: flex;
-  flex-direction: column; /* Dikey listeleme */
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 20px;
 }
+
 .urun {
   background-color: white;
   border: 1px solid #ccc;
@@ -81,16 +100,18 @@ main {
   width: 80%;
   max-width: 800px;
   padding: 15px;
-  display: flex;                /* Yanyana içerik için */
-  align-items: center;         /* Dikey hizalama */
+  display: flex;
+  align-items: center;
   gap: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hafif gölge efekti */
 }
+
 .urun img {
   width: 150px;
   height: auto;
   border-radius: 10px;
 }
+
 footer {
   background-color: #f06292;
   color: white;
@@ -98,21 +119,19 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
-header h1 {
-  margin: 0;
-  text-align: left;
-  padding-left: 20px;
-}
+
 #iletisim {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
   text-align: center;
 }
+
 #iletisim h2 {
   color: #d81b60;
   margin-bottom: 30px;
 }
+
 .iletisim-kart {
   background-color: white;
   border: 2px solid #f06292;
@@ -121,6 +140,7 @@ header h1 {
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .iletisim-kart h3 {
   margin-top: 0;
   color: #f06292;
@@ -129,8 +149,116 @@ header h1 {
 .iletisim-kart p {
   font-size: 18px;
 }
+
 .urun-bilgi {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Sosyal medya bağlantı çubuğu */
+.social-bar {
+  position: fixed;
+  top: 75%; /* Dikeyde ekranın %75 yüksekliğine yerleştirildi */
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  z-index: 1000; /* Diğer içeriklerin üstünde yer alır */
+}
+
+.social-bar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 50%; /* Daire şekli */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-bar a:hover {
+  color: #007bff; /* Hover rengi (isteğe bağlı özelleştirilebilir) */
+  transform: scale(1.2); /* Hover sırasında büyütme efekti */
+}
+
+.social-bar i {
+  font-size: 24px;
+}
+
+/* Slider ana kapsayıcı */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Maksimum genişlik */
+  height: 300px;     /* Yükseklik */
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2); /* Gölge efekti */
+}
+
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Kayma animasyonu */
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  position: relative;
+  height: 100%;
+}
+
+.slide.active {
+  display: block; /* Sadece aktif slide görünür */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Resimler taşmadan, tam oturacak şekilde yerleştirilir */
+  border-radius: 12px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Slider ok butonları */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.slider-btn.prev {
+  left: 15px;
+}
+
+.slider-btn.next {
+  right: 15px;
 }

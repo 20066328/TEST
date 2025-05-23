@@ -1,0 +1,146 @@
+/* Bu CSS dosyası stil tanımlarını içerir */
+
+body {
+  font-family: Arial, sans-serif; /* Genel yazı tipi */
+  margin: 0;
+  background-color: #fff0f5; /* Sayfa arka plan rengi (pembe ton) */
+}
+
+header {
+  background-color: #f06292; /* Üst bar arka plan rengi */
+  color: white; /* Başlık ve menü yazı rengi */
+  padding: 20px;
+  display: flex; /* Elemanları yatay hizalar */
+  justify-content: space-between; /* Başlık sola, menü sağa */
+  align-items: center; /* Dikey ortalama */
+}
+
+header h1 {
+  margin: 0; /* Varsayılan boşluğu kaldır */
+}
+
+nav ul {
+  list-style: none; /* Liste işaretlerini kaldırır */
+  display: flex; /* Yatay liste */
+  gap: 15px; /* Menü elemanları arası boşluk */
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none; /* Altı çizgiyi kaldır */
+  color: white;
+  background-color: #d81b60; /* Menü buton arkaplan rengi */
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #c2185b; /* Hover rengi */
+}
+
+main {
+  display: flex; /* Ürünler ve sepet yan yana */
+  gap: 30px; /* Aralarındaki boşluk */
+  padding: 30px;
+}
+
+.urunler {
+  flex: 2; /* Ürünler alanı daha geniş */
+}
+
+.urun {
+  display: flex; /* Görsel ve açıklama yan yana */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+}
+
+.urun img {
+  width: 120px;
+  border-radius: 8px; /* Resim köşeleri yuvarlatılır */
+}
+
+.urun-bilgi {
+  flex: 1; /* Bilgi alanı genişler */
+}
+
+.urun-bilgi h3 {
+  margin: 0;
+  color: #d81b60;
+}
+
+.urun-bilgi span {
+  font-weight: bold; /* Fiyat gibi bilgiler vurgulanır */
+}
+
+.urun button {
+  padding: 8px 12px;
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.urun button:hover {
+  background-color: #c2185b; /* Buton hover rengi */
+}
+
+.sepet {
+  flex: 1; /* Sepet daha dar */
+  background-color: #ffe4ec; /* Sepet arka plan rengi */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sepet h2 {
+  margin-top: 0;
+  color: #d81b60;
+}
+
+#sepetListesi li {
+  display: flex; /* Ürün ismi ve silme butonu yanyana */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#sepetListesi li button {
+  background-color: red; /* Sil butonu rengi */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.temizle-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #b71c1c; /* Temizle butonu kırmızı */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.temizle-btn:hover {
+  background-color: #880e4f; /* Hover efekti */
+}
+
+footer {
+  background-color: #f06292;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

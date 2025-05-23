@@ -1,45 +1,68 @@
+<!-- Bu HTML dosyası kullanıcı arayüzünü tanımlar -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <!-- Karakter kodlaması Türkçe karakterler için uygun şekilde ayarlandı -->
   <meta charset="UTF-8">
   <title>İletişim</title>
+  <!-- Harici stil dosyasının bağlantısı -->
   <link rel="stylesheet" href="CSS.css">
 </head>
 <body>
 
+  <!-- Sayfa üst kısmı: Başlık ve navigasyon menüsü -->
   <header>
-    <div class="header-container">
-      <h1>Kadın Spor Giyim</h1>
-      <nav>
-        <ul class="menu">
-          <li><a href="HTML.html">Ana Sayfa</a></li>
-          <li><a href="Urunler.html">Ürünler</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Kadın Spor Giyim</h1>
+    <nav>
+      <ul class="menu">
+        <!-- Menü bağlantıları -->
+        <li><a href="HTML.html">Ana Sayfa</a></li>
+        <li><a href="Urunler.html">Ürünler</a></li>
+        <li><a href="İletişim.html">İletişim</a></li>
+      </ul>
+    </nav>
+    <!-- Gereksiz kapanış etiketi (</div>) burada yer alıyor, silinebilir -->
   </header>
 
+  <!-- İletişim bölümü -->
   <section id="iletisim">
     <h2>Bizimle İletişime Geçin</h2>
 
+    <!-- E-posta bilgisi kartı -->
     <div class="iletisim-kart">
       <h3>Email</h3>
       <p>Biziz@kadinspor.com</p>
     </div>
 
+    <!-- Telefon bilgisi kartı -->
     <div class="iletisim-kart">
       <h3>Telefon</h3>
-      <p>+90 555 555 55 55</p>
+      <p>+90 530 647 53 91</p>
     </div>
 
+    <!-- Konum bilgisi kartı -->
     <div class="iletisim-kart">
-      <h3>Adres</h3>
-      <p>Antalya, Türkiye</p>
+      <h3>Konumu</h3>
+      <!-- Harita iframe’i merkezi hizalanmış şekilde gösteriliyor -->
+      <div style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">
+        <!-- Google Haritalar iframe bileşeni -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.286358513311!2d31.9958920333435!3d36.54720778649488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc9968f2cb5ed9%3A0x9528504b8fdaa2e3!2zTlMgU1BPUiBHxLBZxLBN!5e0!3m2!1str!2str!4v1747899866844!5m2!1str!2str" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
   </section>
 
+  <!-- Sayfa alt bilgisi (footer) -->
   <footer>
     <p>&copy; 2025 Kadın Spor Giyim</p>
   </footer>
+
 </body>
 </html>

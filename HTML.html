@@ -1,16 +1,21 @@
+<!-- Bu HTML dosyası kullanıcı arayüzünü tanımlar -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+  <!-- Karakter seti Türkçe karakter desteği için UTF-8 olarak ayarlandı -->
   <meta charset="UTF-8">
   <title>Kadın Spor Giyim</title>
+  <!-- Harici CSS dosyası bağlantısı -->
   <link rel="stylesheet" href="CSS.css">
 </head>
 <body>
 
+  <!-- Sayfa başlığı ve navigasyon menüsü -->
   <header>
     <h1>Kadın Spor Giyim</h1>
     <nav>
       <ul class="menu">
+        <!-- Menü bağlantıları -->
         <li><a href="HTML.html">Ana Sayfa</a></li>
         <li><a href="Urunler.html">Ürünler</a></li>
         <li><a href="İletişim.html">İletişim</a></li>
@@ -18,17 +23,66 @@
     </nav>
   </header>
 
+  <!-- Görsel slider alanı -->
+  <main>
+    <div class="slider-container">
+      <div class="slider-content" id="sliderContent">
+        <!-- İlk görsel (aktif) -->
+        <div class="slide active">
+          <img src="Yeni klasör/W+NK+ALATE+LL+MS+BRA.avif" alt="Görsel 1">
+        </div>
+        <!-- İkinci görsel -->
+        <div class="slide">
+          <img src="Yeni klasör/cem05122-kopya.webp" alt="Görsel 2">
+        </div>
+        <!-- Üçüncü görsel -->
+        <div class="slide">
+          <img src="Yeni klasör/indir (1).jpg" alt="Görsel 3">
+        </div>
+        <!-- Slider gezinme butonları -->
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Tanıtım bölümü -->
   <main>
     <section>
       <h2>Hoş Geldiniz!</h2>
       <p>Rahat ve şık kadın spor giyim ürünlerimizi inceleyin.</p>
+      <!-- Ürünler sayfasına yönlendiren buton -->
       <a class="btn" href="Urunler.html">Ürünleri Gör</a>
     </section>
   </main>
 
+  <!-- Sayfa alt bilgisi -->
   <footer>
     <p>&copy; 2025 Kadın Spor Giyim</p>
   </footer>
+
+  <!-- Slider fonksiyonlarını içeren JS dosyası -->
+  <script src="slider.js"></script>
+
+  <!-- Sosyal medya bağlantıları -->
+  <div class="social-bar">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/905306475391" target="_blank" title="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" height="40">
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/2themy/" target="_blank" title="Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="40" height="40">
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/?" target="_blank" title="Facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="40" height="40">
+    </a>
+    <!-- Google Maps bağlantısı (mağaza konumu) -->
+    <a href="https://www.google.com/maps/place/NS+SPOR+G%C4%B0Y%C4%B0M/@36.5474836,31.9945402,17z/data=!3m1!4b1!4m6!3m5!1s0x14dc9968f2cb5ed9:0x9528504b8fdaa2e3!8m2!3d36.5474836!4d31.9945402!16s%2Fg%2F11pd2sxl1m?hl=tr&entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Google Maps" width="40" height="40">
+    </a>
+  </div>
 
 </body>
 </html>
